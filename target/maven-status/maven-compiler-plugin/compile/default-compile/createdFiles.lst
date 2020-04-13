@@ -1,0 +1,10 @@
+exception\DBException.class
+Servlets\MainServlet.class
+Servlets\EditServlet.class
+services\UserService.class
+Servlets\DeleteUserServlet.class
+dao\UserHibernateDAO.class
+dao\UserDAO.class
+entities\User.class
+util\DBHelper.class
+Servlets\AddUserServlet.class
