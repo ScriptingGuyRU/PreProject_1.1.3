@@ -110,8 +110,7 @@ public class UserHibernateDAO implements UserDAO {
     public User getUserById(Long id) {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        User user = (User) session.createQuery("FROM User WHERE id = :id")
-                .setParameter("id", id).list().get(0); //Так как id уникален, то значение будет только одно
+        User user = (User) session.get(User.class,id);
         transaction.commit();
         session.close();
         return user;
